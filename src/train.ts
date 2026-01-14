@@ -1,5 +1,28 @@
 console.log("TASK AREA!")
 
+// TASK H: 
+
+// shunday function tuzing, u integerlardan iborat arrayni 
+// argument sifatida qabul qilib, faqat positive qiymatlarni 
+// olib string holatda return qilsin
+
+// MASALAN: getPositive([1, -4, 2]) return qiladi "12"
+
+
+function getPositive(num: number[]): number[] {
+    for(let i = num.length -1; i >=0; i--) {
+        if(num[i] < 0) {
+            num.splice(i, 1);
+        }
+    }
+    return num;
+}
+
+console.log("Result:", getPositive([1, -4, 2]));
+
+
+// =====================================================================
+
 // TASK G:
 // Yagona parametrga ega function tuzing.
 // Va bu function parametr orqalik integer ma'lumot turlariga 
@@ -12,19 +35,19 @@ console.log("TASK AREA!")
 // Va bu 21 soni arrayning tarkibidagi birinchi eng katta 
 // son hisobladi va bizga uning indeksi 1 qaytadi.
 
-function getHighestIndex(num: number[]): number {
+// function getHighestIndex(num: number[]): number {
 
-    let maxValue = num[0];
-    let index = 0;
+//     let maxValue = num[0];
+//     let index = 0;
 
-    for (let i = 1; i < num.length; i++) {
-        if(num[i] > maxValue) {
-            maxValue = num[i];
-            index = i;
-        }
-    }
+//     for (let i = 1; i < num.length; i++) {
+//         if(num[i] > maxValue) {
+//             maxValue = num[i];
+//             index = i;
+//         }
+//     }
 
-    return index;
-}
+//     return index;
+// }
 
-console.log("Result:", getHighestIndex([5, 21, 12, 21, 8]))
+// console.log("Result:", getHighestIndex([5, 21, 12, 21, 8]))
