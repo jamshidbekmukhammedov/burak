@@ -14,3 +14,6 @@
 // .env dan foydalanishimiz uchun maxsus package kerak bo'ladi. >>> ("npm i dotenv")
 
 
+// Mongoose:        << mongoosejs.com >>
+//           Mongoose bu MongoDB bilan ishlash uchun xosil qilingan maxsus package!
+//  SQL singari TABLE ga o'xshagan data larni MONGOOSE ning schema lari orqali xosil qilamiz!
