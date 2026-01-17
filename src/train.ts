@@ -1,5 +1,24 @@
 console.log("TASK AREA!")
 
+// TASK H2: 
+
+// Shunday function tuzing, unga string argument pass bolsin.
+//  Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
+
+// MASALAN: getDigits("m14i1t") return qiladi "141"
+
+function getDigits(digit: string): string {
+  const result = [...digit]
+    .filter(char => char >= '0' && char <= '9')
+    .join('');
+
+  return result;
+}
+
+console.log("Result:", getDigits("m14i1t"));
+
+// ==========================================================
+
 // TASK H: 
 
 // shunday function tuzing, u integerlardan iborat arrayni 
@@ -9,16 +28,16 @@ console.log("TASK AREA!")
 // MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 
 
-function getPositive(num: number[]): number[] {
-    for(let i = num.length -1; i >=0; i--) {
-        if(num[i] < 0) {
-            num.splice(i, 1);
-        }
-    }
-    return num;
-}
+// function getPositive(num: number[]): number[] {
+//     for(let i = num.length -1; i >=0; i--) {
+//         if(num[i] < 0) {
+//             num.splice(i, 1);
+//         }
+//     }
+//     return num;
+// }
 
-console.log("Result:", getPositive([1, -4, 2]));
+// console.log("Result:", getPositive([1, -4, 2]));
 
 
 // =====================================================================
