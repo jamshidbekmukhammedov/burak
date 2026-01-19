@@ -6,3 +6,9 @@
         css => SNAKE                                button_style
    - ERROR handling     
  */
+
+/* 
+    Traditional API
+    REST API
+    GaphQL API
+ */
