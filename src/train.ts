@@ -1,4 +1,42 @@
 console.log("TASK AREA!")
+// TASK-I:
+
+// Shunday function tuzing, u parametrdagi array ichida eng ko'p
+// takrorlangan raqamni topib qaytarsin.
+
+// MASALAN: majorityElement([1, 2, 3, 4, 5, 4, 3, 4]); return 4
+
+// Yuqoridag misolda argument sifatida kiritilayotgan array tarkibida 
+// 4 soni ko'p takrorlanganligi uchun 4'ni return qilmoqda.
+
+
+function majorityElement(finddbnum: number[]): number {
+  let maxCount = 0;
+  let result = finddbnum[0];
+  
+  for (let i = 0; i < finddbnum.length; i++) {
+    let count = 0;
+    
+    for (let j = 0; j < finddbnum.length; j++) {
+      if (finddbnum[i] === finddbnum[j]) {
+        count++;
+      }
+    }
+    
+    if (count > maxCount) {
+      maxCount = count;
+      result = finddbnum[i];
+    }
+  }
+  
+  return result;
+}
+
+console.log("Result:", majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+
+
+
+// ========================================================================
 
 // TASK H2: 
 
@@ -7,15 +45,15 @@ console.log("TASK AREA!")
 
 // MASALAN: getDigits("m14i1t") return qiladi "141"
 
-function getDigits(digit: string): string {
-  const result = [...digit]
-    .filter(char => char >= '0' && char <= '9')
-    .join('');
+// function getDigits(digit: string): string {
+//   const result = [...digit]
+//     .filter(char => char >= '0' && char <= '9')
+//     .join('');
 
-  return result;
-}
+//   return result;
+// }
 
-console.log("Result:", getDigits("m14i1t"));
+// console.log("Result:", getDigits("m14i1t"));
 
 // ==========================================================
 
