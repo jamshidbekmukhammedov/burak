@@ -1,4 +1,42 @@
 console.log("TASK AREA!")
+
+// TASK J:
+
+// Shunday function tuzing, u string qabul qilsin.
+// Va string ichidagi eng uzun so'zni qaytarsin.
+
+// MASALAN: findLongestWord("I came from Uzbekistan!"); return "Uzbekistan!"
+// Yuqoridagi text tarkibida 'Uzbekistan'
+// eng uzun so'z bo'lganligi uchun 'Uzbekistan'ni qaytarmoqda
+
+function findLongestWord(targetWord: string): string {
+  let currentWord = "";
+  let longestWord = "";
+  
+  for (let i = 0; i < targetWord.length; i++) {
+    const char = targetWord[i];
+    
+    if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
+      currentWord += char;
+    } else {
+      if (currentWord.length > longestWord.length) {
+        longestWord = currentWord;
+      }
+      currentWord = "";
+    }
+  }
+  
+  if (currentWord.length > longestWord.length) {
+    longestWord = currentWord;
+  }
+  return longestWord;
+}
+
+console.log(findLongestWord("I came from Uzbekistan!"));
+
+
+// =====================================================================
+
 // TASK-I:
 
 // Shunday function tuzing, u parametrdagi array ichida eng ko'p
@@ -10,29 +48,29 @@ console.log("TASK AREA!")
 // 4 soni ko'p takrorlanganligi uchun 4'ni return qilmoqda.
 
 
-function majorityElement(finddbnum: number[]): number {
-  let maxCount = 0;
-  let result = finddbnum[0];
+// function majorityElement(finddbnum: number[]): number {
+//   let maxCount = 0;
+//   let result = finddbnum[0];
   
-  for (let i = 0; i < finddbnum.length; i++) {
-    let count = 0;
+//   for (let i = 0; i < finddbnum.length; i++) {
+//     let count = 0;
     
-    for (let j = 0; j < finddbnum.length; j++) {
-      if (finddbnum[i] === finddbnum[j]) {
-        count++;
-      }
-    }
+//     for (let j = 0; j < finddbnum.length; j++) {
+//       if (finddbnum[i] === finddbnum[j]) {
+//         count++;
+//       }
+//     }
     
-    if (count > maxCount) {
-      maxCount = count;
-      result = finddbnum[i];
-    }
-  }
+//     if (count > maxCount) {
+//       maxCount = count;
+//       result = finddbnum[i];
+//     }
+//   }
   
-  return result;
-}
+//   return result;
+// }
 
-console.log("Result:", majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+// console.log("Result:", majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
 
 
 
