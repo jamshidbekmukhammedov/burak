@@ -3,8 +3,9 @@ dotenv.config();
 import mongoose from 'mongoose';
 import app from './app';
 
+// TCP vs HTTP
 mongoose
-    .connect(process.env.MONGO_URL as string, {}).then(data => {
+    .connect(process.env.MONGO_URL as string, {}).then(data => {        // configni ishatish uchun process propertie bo'lib kelyapti! 
         console.log('MongoDB connection succeed');
         const PORT = process.env.PORT ?? 3003;
         app.listen(PORT, function () {

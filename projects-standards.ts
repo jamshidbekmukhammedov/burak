@@ -12,3 +12,8 @@
     REST API
     GaphQL API
  */
+
+/* 
+   Traditional Frontend Development(FD)   => BSSR (Admin)    =>  EJS
+   Modern Frontend Development(FD)        => SPA (USER)      =>  REACT
+*/
