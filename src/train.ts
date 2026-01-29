@@ -1,5 +1,24 @@
 console.log("TASK AREA!")
 
+// TASK K: 
+
+// Shunday function yozing, u string qabul qilsin va 
+// string ichidagi unli harflar sonini qaytarsin.
+// MASALAN: countVowels("string") return 1;
+
+function countVowels(findVowel: string): number {
+  const vowels = "aeiouAEIOU";
+
+  return [...findVowel].reduce((count, char) => {
+    return vowels.includes(char) ? count + 1 : count;
+  }, 0);
+}
+
+console.log("result:", countVowels("string"));
+
+
+// =========================================================================
+
 // TASK J:
 
 // Shunday function tuzing, u string qabul qilsin.
@@ -9,30 +28,30 @@ console.log("TASK AREA!")
 // Yuqoridagi text tarkibida 'Uzbekistan'
 // eng uzun so'z bo'lganligi uchun 'Uzbekistan'ni qaytarmoqda
 
-function findLongestWord(targetWord: string): string {
-  let currentWord = "";
-  let longestWord = "";
+// function findLongestWord(targetWord: string): string {
+//   let currentWord = "";
+//   let longestWord = "";
   
-  for (let i = 0; i < targetWord.length; i++) {
-    const char = targetWord[i];
+//   for (let i = 0; i < targetWord.length; i++) {
+//     const char = targetWord[i];
     
-    if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
-      currentWord += char;
-    } else {
-      if (currentWord.length > longestWord.length) {
-        longestWord = currentWord;
-      }
-      currentWord = "";
-    }
-  }
+//     if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
+//       currentWord += char;
+//     } else {
+//       if (currentWord.length > longestWord.length) {
+//         longestWord = currentWord;
+//       }
+//       currentWord = "";
+//     }
+//   }
   
-  if (currentWord.length > longestWord.length) {
-    longestWord = currentWord;
-  }
-  return longestWord;
-}
+//   if (currentWord.length > longestWord.length) {
+//     longestWord = currentWord;
+//   }
+//   return longestWord;
+// }
 
-console.log(findLongestWord("I came from Uzbekistan!"));
+// console.log(findLongestWord("I came from Uzbekistan!"));
 
 
 // =====================================================================

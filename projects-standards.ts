@@ -17,3 +17,8 @@
    Traditional Frontend Development(FD)   => BSSR (Admin)    =>  EJS
    Modern Frontend Development(FD)        => SPA (USER)      =>  REACT
 */
+
+/*
+requiest join
+self destroy
+*/
