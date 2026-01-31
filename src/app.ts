@@ -7,6 +7,7 @@ import { MORGAN_FORMAT } from './libs/config';
 
 import session from 'express-session';
 import ConnectMongoDB from 'connect-mongodb-session';
+import { T } from './libs/types/common';
 
 const MongoDBStore = ConnectMongoDB(session);
 const store = new MongoDBStore({
@@ -29,12 +30,18 @@ app.use(
             maxAge: 1000 * 3600 * 3  // 3h
         },
         store: store,
+        resave: true,
         rolling: true,   // 10:30 auth => 13:30 gacha saqlanadi! TRUE holatida 
                         // 12:00 da kiradigan bo'lsak auth vaqti 12:00 dan 15:00 gacha davom etadi!
                         // Agar FALSE bo'lsa 13:30 gacha qolaveradi! 
         saveUninitialized: true,
     })
 );
+app.use(function(req, res, next) {
+    const sessionInstance = req.session as T;
+    res.locals.member = sessionInstance.member;
+    next();
+})
 
 /** 3-VIEWS **/ 
 app.set("views", path.join(__dirname, "views"));
