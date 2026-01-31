@@ -7,18 +7,25 @@
    - ERROR handling     
  */
 
-/* 
+/*  Request:
     Traditional API
     REST API
     GaphQL API
  */
 
-/* 
+/* FRONTEND development:
    Traditional Frontend Development(FD)   => BSSR (Admin)    =>  EJS
    Modern Frontend Development(FD)        => SPA (USER)      =>  REACT
 */
 
-/*
+/* Cookies:
 requiest join
 self destroy
+*/
+
+/* Validations:
+   FRONTEND Validations
+   Pipe Validations Burak loyhada bunday foydalanmaymiz!
+   BACKEND Validations
+   Database Validations
 */

@@ -1,20 +1,62 @@
 console.log("TASK AREA!")
 
+// TASK L: 
+
+// Shunday function yozing, u string qabul qilsin va string 
+// ichidagi hamma sozlarni chappasiga yozib va sozlar ketma-ketligini 
+// buzmasdan stringni qaytarsin.
+// MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc";
+
+
+function reverseSentence(sentence: string): string {
+  let result = "";
+  let curentWord = "";
+  
+  for (let i = 0; i < sentence.length; i++) {
+    const char = sentence[i];
+    
+    const checkNotSymble = 
+    (char >= 'a' && char <= 'z') || 
+    (char >= 'A' && char <= 'Z') || 
+    (char >= '0' && char <= '9');
+    
+    if (char === " ") {
+      for (let j = curentWord.length - 1; j >= 0; j--) {
+        result += curentWord[j];
+      }
+      result += " ";
+      curentWord = "";
+    } else if (checkNotSymble) {
+      curentWord += char;
+    }
+  }
+  
+  for (let j = curentWord.length - 1; j >= 0; j--) {
+    result += curentWord[j];
+  }
+  
+  return result;
+}
+
+console.log("result:", reverseSentence("we like coding!"));
+
+// ======================================================================
+
 // TASK K: 
 
 // Shunday function yozing, u string qabul qilsin va 
 // string ichidagi unli harflar sonini qaytarsin.
 // MASALAN: countVowels("string") return 1;
 
-function countVowels(findVowel: string): number {
-  const vowels = "aeiouAEIOU";
+// function countVowels(findVowel: string): number {
+//   const vowels = "aeiouAEIOU";
 
-  return [...findVowel].reduce((count, char) => {
-    return vowels.includes(char) ? count + 1 : count;
-  }, 0);
-}
+//   return [...findVowel].reduce((count, char) => {
+//     return vowels.includes(char) ? count + 1 : count;
+//   }, 0);
+// }
 
-console.log("result:", countVowels("string"));
+// console.log("result:", countVowels("string"));
 
 
 // =========================================================================
