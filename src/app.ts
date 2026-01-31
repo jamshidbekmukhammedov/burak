@@ -29,10 +29,10 @@ app.use(
             maxAge: 1000 * 3600 * 3  // 3h
         },
         store: store,
-        resave: true,   // 10:30 auth => 13:30 gacha saqlanadi! TRUE holatida 
+        rolling: true,   // 10:30 auth => 13:30 gacha saqlanadi! TRUE holatida 
                         // 12:00 da kiradigan bo'lsak auth vaqti 12:00 dan 15:00 gacha davom etadi!
                         // Agar FALSE bo'lsa 13:30 gacha qolaveradi! 
-        saveUninitialized: true
+        saveUninitialized: true,
     })
 );
 
