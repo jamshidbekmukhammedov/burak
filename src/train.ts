@@ -1,5 +1,28 @@
 console.log("TASK AREA!")
 
+// TASK M: 
+
+// Shunday function yozing, u raqamlardan tashkil topgan array qabul qilsin va 
+// array ichidagi har bir raqam uchun raqamni ozi va hamda osha raqamni 
+// kvadratidan tashkil topgan object hosil qilib, 
+// hosil bolgan objectlarni array ichida qaytarsin.
+// MASALAN: getSquareNumbers([1, 2, 3]) return [{number: 1, square: 1}, 
+// {number: 2, square: 4}, {number: 3, square: 9}];
+
+function getSquareNumbers(numbers: number[]): 
+{ number: number; square: number }[] {
+  return [...numbers].map(num => ({
+    number: num,
+    square: num ** 2  
+  }));
+}
+
+console.log("result:", getSquareNumbers([1, 2, 3]));
+
+
+// ==============================================================================
+
+
 // TASK L: 
 
 // Shunday function yozing, u string qabul qilsin va string 
@@ -8,37 +31,37 @@ console.log("TASK AREA!")
 // MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc";
 
 
-function reverseSentence(sentence: string): string {
-  let result = "";
-  let curentWord = "";
+// function reverseSentence(sentence: string): string {
+//   let result = "";
+//   let curentWord = "";
   
-  for (let i = 0; i < sentence.length; i++) {
-    const char = sentence[i];
+//   for (let i = 0; i < sentence.length; i++) {
+//     const char = sentence[i];
     
-    const checkNotSymble = 
-    (char >= 'a' && char <= 'z') || 
-    (char >= 'A' && char <= 'Z') || 
-    (char >= '0' && char <= '9');
+//     const checkNotSymble = 
+//     (char >= 'a' && char <= 'z') || 
+//     (char >= 'A' && char <= 'Z') || 
+//     (char >= '0' && char <= '9');
     
-    if (char === " ") {
-      for (let j = curentWord.length - 1; j >= 0; j--) {
-        result += curentWord[j];
-      }
-      result += " ";
-      curentWord = "";
-    } else if (checkNotSymble) {
-      curentWord += char;
-    }
-  }
+//     if (char === " ") {
+//       for (let j = curentWord.length - 1; j >= 0; j--) {
+//         result += curentWord[j];
+//       }
+//       result += " ";
+//       curentWord = "";
+//     } else if (checkNotSymble) {
+//       curentWord += char;
+//     }
+//   }
   
-  for (let j = curentWord.length - 1; j >= 0; j--) {
-    result += curentWord[j];
-  }
+//   for (let j = curentWord.length - 1; j >= 0; j--) {
+//     result += curentWord[j];
+//   }
   
-  return result;
-}
+//   return result;
+// }
 
-console.log("result:", reverseSentence("we like coding!"));
+// console.log("result:", reverseSentence("we like coding!"));
 
 // ======================================================================
 
