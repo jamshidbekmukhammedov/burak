@@ -34,7 +34,7 @@ productController.createNewProduct = async (req: AdminRequest, res: Response) =>
 
         const data: ProductInput = req.body;
         data.productImages = req.files?.map(ele => {
-            return ele.path.replace(/\\/g, '/');
+            return ele.path.replace(/\\/g, '/');    // Regular expression (REGEX)
         });
 
         await productService.createNewProduct(data);
