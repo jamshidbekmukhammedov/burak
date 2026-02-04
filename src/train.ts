@@ -1,5 +1,26 @@
 console.log("TASK AREA!")
 
+// TASK N:
+
+// Shunday function yozing, u string qabul qilsin va string palindrom 
+// yani togri oqilganda ham, orqasidan oqilganda ham bir hil 
+// oqiladigan soz ekanligini aniqlab boolean qiymat qaytarsin.
+
+// MASALAN: palindromCheck("dad") return true;  
+// palindromCheck("son") return false;
+
+function palindromCheck(palindromWord: string): boolean {
+  const result = [...palindromWord].reverse().join('');
+  return palindromWord === result;
+}
+
+console.log("result1:", palindromCheck("dad"));
+console.log("result2:", palindromCheck("son"));
+
+
+
+// ==========================================================================
+
 // TASK M: 
 
 // Shunday function yozing, u raqamlardan tashkil topgan array qabul qilsin va 
@@ -9,15 +30,15 @@ console.log("TASK AREA!")
 // MASALAN: getSquareNumbers([1, 2, 3]) return [{number: 1, square: 1}, 
 // {number: 2, square: 4}, {number: 3, square: 9}];
 
-function getSquareNumbers(numbers: number[]): 
-{ number: number; square: number }[] {
-  return [...numbers].map(num => ({
-    number: num,
-    square: num ** 2  
-  }));
-}
+// function getSquareNumbers(numbers: number[]): 
+// { number: number; square: number }[] {
+//   return [...numbers].map(num => ({
+//     number: num,
+//     square: num ** 2  
+//   }));
+// }
 
-console.log("result:", getSquareNumbers([1, 2, 3]));
+// console.log("result:", getSquareNumbers([1, 2, 3]));
 
 
 // ==============================================================================
