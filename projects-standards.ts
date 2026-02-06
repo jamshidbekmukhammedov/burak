@@ -8,9 +8,10 @@
  */
 
 /*  Request:
-    Traditional API
-    REST API
-    GaphQL API
+    - Traditional API - HTML ni o'zini elementlari orqali 
+    //            amalga oshiriladigan request hisoblanadi! (form POST)
+    - REST API
+    - GaphQL API
  */
 
 /* FRONTEND development:
