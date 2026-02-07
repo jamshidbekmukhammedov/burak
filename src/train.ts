@@ -1,5 +1,33 @@
 console.log("TASK AREA!")
 
+// TASK O:
+
+// Shunday function yozing va u har xil qiymatlardan iborat array qabul qilsin.
+// Va array ichidagi sonlar yig'indisini hisoblab chiqgan javobni qaytarsin
+
+// MASALAN: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]); return 45
+
+// Yuqoridagi misolda array tarkibida faqatgina ikkita yagona son mavjud 
+// bular 10 hamda 35
+// Qolganlari nested bo'lib yoki type'lari number emas.
+
+function calculateSumOfNumbers(calculateOnlyNum: any[]): number {
+    let currentNum = 0;
+    
+    for (let i = 0; i < calculateOnlyNum.length; i++) {
+        if (typeof calculateOnlyNum[i] === "number") {
+            currentNum += calculateOnlyNum[i];
+        }
+    }
+    
+    return currentNum;
+}
+
+console.log("result", calculateSumOfNumbers([10, "10", {son: 10}, true, 35])); // 45
+
+
+// ===========================================================================
+
 // TASK N:
 
 // Shunday function yozing, u string qabul qilsin va string palindrom 
@@ -9,13 +37,13 @@ console.log("TASK AREA!")
 // MASALAN: palindromCheck("dad") return true;  
 // palindromCheck("son") return false;
 
-function palindromCheck(palindromWord: string): boolean {
-  const result = [...palindromWord].reverse().join('');
-  return palindromWord === result;
-}
+// function palindromCheck(palindromWord: string): boolean {
+//   const result = [...palindromWord].reverse().join('');
+//   return palindromWord === result;
+// }
 
-console.log("result1:", palindromCheck("dad"));
-console.log("result2:", palindromCheck("son"));
+// console.log("result1:", palindromCheck("dad"));
+// console.log("result2:", palindromCheck("son"));
 
 
 
