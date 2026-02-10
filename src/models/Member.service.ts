@@ -1,3 +1,4 @@
+import { MemberStatus } from './../libs/enums/member.enum';
 import { MemberType } from '../libs/enums/member.enum';
 import MemberModel from '../schema/Member.model';
 import { LoginInput, Member, MemberInput, MemberUpdateInput } from "../libs/types/member";
@@ -29,14 +30,19 @@ class MemberService {
 
     // Login qilish mantig'i!
     public async login(input: LoginInput): Promise<Member> {
-        // TODO: consider member status later
         const member = await this.memberModel
         .findOne(
-            {memberNick: input.memberNick},   // FILTER
-            {memberNick: 1, memberPassword: 1}  // PROJECTION
+            {memberNick: input.memberNick, 
+            memberStatus: {$ne: MemberStatus.DELETE}
+            },   // FILTER
+            {memberNick: 1, memberPassword: 1, memberStatus: 1}  // PROJECTION
         )
         .exec();
         if(!member) throw new Errors(HttpCode.NOT_FOUND, Message.NO_MEMBER_NICK);
+        else if(member.memberStatus === MemberStatus.BLOCK) {
+            throw new Errors(HttpCode.FORBIDDEN, Message.BLOCKED_USER);
+        }
+
         // BCRYPT ni compare methodi orqali database dagi password bilan 
         // input passwordni solishtiryapti!
         const isMatch = await bcrypt.compare(
