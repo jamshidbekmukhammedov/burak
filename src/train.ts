@@ -1,5 +1,28 @@
 console.log("TASK AREA!")
 
+
+// TASK P:
+
+// Parametr sifatida yagona object qabul qiladigan function yozing.
+// Qabul qilingan objectni nested array sifatida convert qilib qaytarsin
+
+// MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
+
+
+function objectToArray(input: {[key: string]: number}): [string, number][] {
+    const result: [string, number][] = [];
+    
+    for (let key in input) {
+        result.push([key, input[key]]);
+    }
+    
+    return result;
+}
+
+console.log(objectToArray({a: 10, b: 20, c: 30}));
+
+// ===========================================================================
+
 // TASK O:
 
 // Shunday function yozing va u har xil qiymatlardan iborat array qabul qilsin.
@@ -11,19 +34,19 @@ console.log("TASK AREA!")
 // bular 10 hamda 35
 // Qolganlari nested bo'lib yoki type'lari number emas.
 
-function calculateSumOfNumbers(calculateOnlyNum: any[]): number {
-    let currentNum = 0;
+// function calculateSumOfNumbers(calculateOnlyNum: any[]): number {
+//     let currentNum = 0;
     
-    for (let i = 0; i < calculateOnlyNum.length; i++) {
-        if (typeof calculateOnlyNum[i] === "number") {
-            currentNum += calculateOnlyNum[i];
-        }
-    }
+//     for (let i = 0; i < calculateOnlyNum.length; i++) {
+//         if (typeof calculateOnlyNum[i] === "number") {
+//             currentNum += calculateOnlyNum[i];
+//         }
+//     }
     
-    return currentNum;
-}
+//     return currentNum;
+// }
 
-console.log("result", calculateSumOfNumbers([10, "10", {son: 10}, true, 35])); // 45
+// console.log("result", calculateSumOfNumbers([10, "10", {son: 10}, true, 35])); 
 
 
 // ===========================================================================
