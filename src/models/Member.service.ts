@@ -109,7 +109,7 @@ class MemberService {
         .findByIdAndUpdate(
             { _id: input._id },     // FILTER
             input,                  // UPDATE
-            { new: true, runValidators: true })          // OPTION
+            { new: true, runValidators: true })   // OPTION
         .exec();
 
         if(!result) throw new Errors(HttpCode.NOT_MODIFIED, Message.UPDATE_FAILED);
