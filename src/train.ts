@@ -1,6 +1,28 @@
 console.log("TASK AREA!")
 
 
+// TASK Q:
+
+// Shunday function yozing, u 2 ta parametrga ega bo'lib
+// birinchisi object, ikkinchisi string bo'lsin.
+// Agar qabul qilinayotgan ikkinchi string, objectning
+// biror bir propertysiga mos kelsa, 'true', aks holda mos kelmasa 'false' qaytarsin.
+
+// MASALAN: hasProperty({ name: "BMW", model: "M3" }, "model"); return true;
+// Ushbu misolda, 'model' string, objectning propertysiga mos kelganligi uchun 'true' natijani qaytarmoqda
+
+function hasProperty(value: object, key: string): boolean {
+  if (typeof value !== "object" || value === null) return false;
+
+  return key in value;
+}
+
+console.log("result:", hasProperty({ name: "BMW", model: "M3" }, "model"));
+
+
+
+// =========================================================================
+
 // TASK P:
 
 // Parametr sifatida yagona object qabul qiladigan function yozing.
@@ -9,17 +31,17 @@ console.log("TASK AREA!")
 // MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
 
 
-function objectToArray(input: {[key: string]: number}): [string, number][] {
-    const result: [string, number][] = [];
+// function objectToArray(input: {[key: string]: number}): [string, number][] {
+//     const result: [string, number][] = [];
     
-    for (let key in input) {
-        result.push([key, input[key]]);
-    }
+//     for (let key in input) {
+//         result.push([key, input[key]]);
+//     }
     
-    return result;
-}
+//     return result;
+// }
 
-console.log(objectToArray({a: 10, b: 20, c: 30}));
+// console.log(objectToArray({a: 10, b: 20, c: 30}));
 
 // ===========================================================================
 
