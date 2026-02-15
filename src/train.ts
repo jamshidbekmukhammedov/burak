@@ -1,5 +1,27 @@
 console.log("TASK AREA!")
 
+// TASK-S:
+
+// Shunday function yozing, u numberlardan tashkil topgan 
+// array qabul qilsin va osha numberlar orasidagi tushib qolgan sonni 
+// topib uni return qilsin
+// MASALAN: missingNumber([3, 0, 1]) return 2
+
+function missingNumber(numbers: number[]): number {
+  numbers.sort((a, b) => a - b);
+  
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] !== i) {
+      return i; 
+    }
+  }
+  return numbers.length;
+}
+
+console.log(missingNumber([3, 0, 1]));
+
+// =========================================================================
+
 // TASK R
 
 // Shunday function yozing, u string parametrga ega bo'lsin.
@@ -10,38 +32,38 @@ console.log("TASK AREA!")
 // 1 + 3 = 4, shu sababli 4 natijani qaytarmoqda.
 
 
-function calculate(equalNum: string): number {
-  let num1 = '';
-  let operator = '';
-  let num2 = '';
-  let foundOperator = false;
+// function calculate(equalNum: string): number {
+//   let num1 = '';
+//   let operator = '';
+//   let num2 = '';
+//   let foundOperator = false;
   
-  for (let char of equalNum) {
-    if (char === ' ') continue; 
+//   for (let char of equalNum) {
+//     if (char === ' ') continue; 
 
-    if (['+', '-', '*', '/'].includes(char)) {
-      operator = char;
-      foundOperator = true;
-    } else if (!foundOperator) {
-      num1 += char;
-    } else {
-      num2 += char;
-    }
-  }
+//     if (['+', '-', '*', '/'].includes(char)) {
+//       operator = char;
+//       foundOperator = true;
+//     } else if (!foundOperator) {
+//       num1 += char;
+//     } else {
+//       num2 += char;
+//     }
+//   }
   
-  const n1 = Number(num1);
-  const n2 = Number(num2);
+//   const n1 = Number(num1);
+//   const n2 = Number(num2);
   
-  switch (operator) {
-    case '+': return n1 + n2;
-    case '-': return n1 - n2;
-    case '*': return n1 * n2;
-    case '/': return n1 / n2;
-    default: return 0;
-  }
-}
+//   switch (operator) {
+//     case '+': return n1 + n2;
+//     case '-': return n1 - n2;
+//     case '*': return n1 * n2;
+//     case '/': return n1 / n2;
+//     default: return 0;
+//   }
+// }
 
-console.log(calculate(" 1 + 3"));
+// console.log(calculate(" 1 + 3"));
 
 
 // =====================================================================
