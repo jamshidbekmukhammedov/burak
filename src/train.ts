@@ -1,6 +1,38 @@
 console.log("TASK AREA!")
 
 
+
+// TASK W
+
+// Shunday function yozing, u o'ziga parametr sifatida
+// yagona array va number qabul qilsin. Siz tuzgan function
+// arrayni numberda berilgan uzunlikda kesib bo'laklarga
+// ajratgan holatida qaytarsin.
+// MASALAN: chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+// return [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]];
+
+// Yuqoridagi namunada berilayotgan array ikkinchi parametr 3'ga
+// asoslanib 3 bo'lakga bo'linib qaytmoqda. Qolgani esa o'z holati qolyapti
+
+
+
+function chunkArray<T>(existingArray: T[], chunkSize: number): T[][] {
+  const chunks: T[][] = []
+  let i = 0;
+
+  while (i < existingArray.length) {
+    chunks.push(existingArray.slice(i, i + chunkSize))
+    i += chunkSize;
+  }
+
+  return chunks;
+}
+
+console.log("chankArray:", chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3))
+
+// =============================================================
+
+
 // TASK V
 
 // Shunday function yozing, uni string parametri bo'lsin.
@@ -14,16 +46,16 @@ console.log("TASK AREA!")
 // object sifatida qaytarilmoqda.
 
 
-function countChars(string: string): Record<string, number> {
-  const result: Record<string, number> = {};
+// function countChars(string: string): Record<string, number> {
+//   const result: Record<string, number> = {};
   
-  [...string].forEach(letter => {
-    result[letter] = (result[letter] ?? 0) + 1;
-  });
-  return result;
-}
+//   [...string].forEach(letter => {
+//     result[letter] = (result[letter] ?? 0) + 1;
+//   });
+//   return result;
+// }
 
-console.log("return:", countChars("hello"))
+// console.log("return:", countChars("hello"))
 
 
 
