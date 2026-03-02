@@ -1,6 +1,38 @@
 console.log("TASK AREA!")
 
 
+// TASK Y
+
+// Shunday function yozing, uni 2'ta array parametri bo'lsin.
+// Bu function ikkala arrayda ham ishtirok etgan bir xil
+// qiymatlarni yagona arrayga joylab qaytarsin.
+
+// MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3]
+
+// Yuqoridagi misolda, argument sifatida berilayotgan array'larda
+// o'xshash sonlar mavjud. Function'ning vazifasi esa ana shu
+// ikkala array'da ishtirok etgan o'xshash sonlarni yagona arrayga
+// joylab return qilmoqda.
+
+
+function findIntersection <T>(firstArr: T[], secArr: T[]): T[] {
+  const result: T[] = [];
+  let i = 0;
+  while(i < firstArr.length) {
+      if(secArr.includes(firstArr[i])) {
+          result.push(firstArr[i]);
+      }
+      i++;
+  }
+
+  return result;
+}
+
+console.log("return:", findIntersection([1,2,3], [3,2,0]));
+
+
+// =============================================================================
+
 // TASK X
 
 // Shunday function yozing, uni object va string parametrlari bo'lsin.
@@ -16,27 +48,27 @@ console.log("TASK AREA!")
 // Funktsiya, shu ikkinchi argument 'model', birinchi argument object
 // tarkibida kalit sifatida 2 marotaba takrorlanganligi uchun 2 soni return qilmoqda
 
-function countOccurrences(object: any, searchString: string): number {
-  let count = 0;
+// function countOccurrences(object: any, searchString: string): number {
+//   let count = 0;
 
-  if (typeof object !== "object" || object === null) {
-    return 0
-  }
-  for (const key in object as Record<string, any>) {
-    if (key === searchString) {
-      count++
-    }
-    const value = (object as Record<string, any>)[key];
+//   if (typeof object !== "object" || object === null) {
+//     return 0
+//   }
+//   for (const key in object as Record<string, any>) {
+//     if (key === searchString) {
+//       count++
+//     }
+//     const value = (object as Record<string, any>)[key];
 
-    if (typeof value === "object" && value !== null) {
-      count += countOccurrences(value, searchString);
-    }
-  }
+//     if (typeof value === "object" && value !== null) {
+//       count += countOccurrences(value, searchString);
+//     }
+//   }
 
-  return count;
-}
+//   return count;
+// }
 
-console.log("return:", countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, "model"));
+// console.log("return:", countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, "model"));
 
 
 // ======================================================================
