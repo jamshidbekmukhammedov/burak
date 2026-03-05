@@ -1,5 +1,36 @@
 console.log("TASK AREA!")
 
+// TASK Z
+
+// Shunday function yozing. Bu function sonlardan iborat array
+// qabul qilsin. Function'ning vazifasi array tarkibidagi juft
+// sonlarni topib ularni yig'disini qaytarsin.
+
+// MASALAN:
+// sumEvens([1, 2, 3]); return 2;
+// sumEvens([1, 2, 3, 2]); return 4;
+
+// Yuqoridagi misolda, bizning funktsiya
+// berilayotgan array tarkibidagi sonlar ichidan faqatgina juft bo'lgan
+// sonlarni topib, ularni hisoblab yig'indisini qaytarmoqda.
+
+
+
+function sumEvens(findEvens: number[]): number {
+    let sum = 0;
+
+    for(const number of findEvens) {
+        if(number % 2 === 0) sum += number;  
+    }
+
+    return sum;
+}
+console.log("ex1:", sumEvens([1, 2, 3]));
+console.log("ex2:", sumEvens([1, 2, 3, 2]));
+
+
+
+// ============================================================================
 
 // TASK Y
 
@@ -15,20 +46,20 @@ console.log("TASK AREA!")
 // joylab return qilmoqda.
 
 
-function findIntersection <T>(firstArr: T[], secArr: T[]): T[] {
-  const result: T[] = [];
-  let i = 0;
-  while(i < firstArr.length) {
-      if(secArr.includes(firstArr[i])) {
-          result.push(firstArr[i]);
-      }
-      i++;
-  }
+// function findIntersection <T>(firstArr: T[], secArr: T[]): T[] {
+//   const result: T[] = [];
+//   let i = 0;
+//   while(i < firstArr.length) {
+//       if(secArr.includes(firstArr[i])) {
+//           result.push(firstArr[i]);
+//       }
+//       i++;
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-console.log("return:", findIntersection([1,2,3], [3,2,0]));
+// console.log("return:", findIntersection([1,2,3], [3,2,0]));
 
 
 // =============================================================================
