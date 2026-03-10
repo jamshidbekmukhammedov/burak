@@ -1,5 +1,21 @@
 console.log("TASK AREA!")
 
+// TASK-ZB:
+
+// Shunday function yozing, uni 2 ta number 
+// parametri bolsin va berilgan sonlar orasidan random raqam return qilsin
+
+// MASALAN: randomBetween(30, 50) return 45
+
+function randomBetween(minNum: number, maxNum: number): number {
+    return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+};    
+
+console.log("random number return:", randomBetween(30, 50));
+
+
+// ==========================================================================
+
 // TASK Z
 
 // Shunday function yozing. Bu function sonlardan iborat array
@@ -16,17 +32,17 @@ console.log("TASK AREA!")
 
 
 
-function sumEvens(findEvens: number[]): number {
-    let sum = 0;
+// function sumEvens(findEvens: number[]): number {
+//     let sum = 0;
 
-    for(const number of findEvens) {
-        if(number % 2 === 0) sum += number;  
-    }
+//     for(const number of findEvens) {
+//         if(number % 2 === 0) sum += number;  
+//     }
 
-    return sum;
-}
-console.log("ex1:", sumEvens([1, 2, 3]));
-console.log("ex2:", sumEvens([1, 2, 3, 2]));
+//     return sum;
+// }
+// console.log("ex1:", sumEvens([1, 2, 3]));
+// console.log("ex2:", sumEvens([1, 2, 3, 2]));
 
 
 

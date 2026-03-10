@@ -3,7 +3,7 @@ import { T } from "../libs/types/common";
 import { Response } from "express";
 import Errors, { HttpCode } from "../libs/Errors";
 import OrderService from "../models/Order.service";
-import { OrderUpdateInput, OredInquiry } from "../libs/types/order";
+import { OrderInquiry, OrderUpdateInput } from "../libs/types/order";
 import { OrderStatus } from "../libs/enums/order.num";
 
 const orderService = new OrderService();
@@ -26,8 +26,8 @@ orderController.createOrder = async (req: ExtendedRequest, res: Response) => {
 orderController.getMyOrders = async (req: ExtendedRequest, res: Response) => {
     try{
         console.log("getMyOrders");
-        const {page, limit, orderStatus} = req.query;
-        const inquiry: OredInquiry = {
+        const {page, limit, orderStatus} = req.query;  // distraction
+        const inquiry: OrderInquiry = {
             page: Number(page),
             limit: Number(limit),
             orderStatus: orderStatus as OrderStatus,

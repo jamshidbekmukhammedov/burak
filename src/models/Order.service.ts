@@ -1,5 +1,5 @@
 import { ObjectId } from 'mongoose';
-import { Order, OrderItemInput, OrderUpdateInput, OredInquiry } from "../libs/types/order";
+import { Order, OrderItemInput, OrderUpdateInput, OrderInquiry } from "../libs/types/order";
 import { Member } from "../libs/types/member";
 import OrderModel from "../schema/Order.model";
 import OrderItemModel from "../schema/OrderItem.model";
@@ -63,7 +63,7 @@ class OrderService {
 
     public async getMyOrders(
         member: Member, 
-        inquiry: OredInquiry
+        inquiry: OrderInquiry
     ): Promise<Order[]> {
         const memberId = shapeIntoMongooseObjectId(member._id);
         const matches = {memberId: memberId, orderStatus: inquiry.orderStatus};

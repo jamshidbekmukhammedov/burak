@@ -32,7 +32,7 @@ export interface OrderItemInput {
     orderId?: ObjectId;
 }
 
-export interface OredInquiry {
+export interface OrderInquiry {
     page: number;
     limit: number;
     orderStatus: OrderStatus;
