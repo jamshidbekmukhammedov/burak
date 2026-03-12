@@ -1,5 +1,33 @@
 console.log("TASK AREA!")
 
+// TASK ZC
+
+// Selisy (°C) shkalasi bo'yicha raqam qabul qilib, uni
+// Ferenhayt (°F) shkalisaga o'zgaritib beradigan function yozing.
+
+// MASALAN: celsiusToFahrenheit(0) return 32;
+// MASALAN: celsiusToFahrenheit(10) return 50;
+
+// Yuqoridagi misolda, 0°C, 32°F'ga teng.
+// Yoki 10 gradus Selsiy, 50 Farenhaytga teng.
+
+// °C va °F => Tempraturani o'lchashda ishlatiladigan o'lchov birligi.
+
+
+function celsiusToFahrenheit(celsius: number): number {
+  const factor = 9 / 5;
+  const offset = 32;
+  return celsius * factor + offset;
+}
+
+console.log("returnFirst:", celsiusToFahrenheit(0));
+console.log("returnSec:", celsiusToFahrenheit(10));
+
+
+
+
+// ==========================================================================
+
 // TASK-ZB:
 
 // Shunday function yozing, uni 2 ta number 
@@ -7,11 +35,11 @@ console.log("TASK AREA!")
 
 // MASALAN: randomBetween(30, 50) return 45
 
-function randomBetween(minNum: number, maxNum: number): number {
-    return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
-};    
+// function randomBetween(minNum: number, maxNum: number): number {
+//     return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+// };    
 
-console.log("random number return:", randomBetween(30, 50));
+// console.log("random number return:", randomBetween(30, 50));
 
 
 // ==========================================================================
