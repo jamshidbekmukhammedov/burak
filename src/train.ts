@@ -1,5 +1,32 @@
 console.log("TASK AREA!")
 
+// TASK ZD
+
+// Shunday function yozing. Bu function o'ziga, parametr sifatida
+// birinchi oddiy number, keyin yagona array va uchinchi bo'lib oddiy number
+// qabul qilsin. Berilgan birinchi number parametr, arrayning tarkibida indeks bo'yicha hisoblanib,
+// shu aniqlangan indeksni uchinchi number parametr bilan alashtirib, natija sifatida
+// yangilangan arrayni qaytarsin.
+
+// MASALAN: changeNumberInArray(1, [1,3,7,2], 2) return [1,2,7,2];
+
+// Yuqoridagi misolda, birinchi raqam bu '1' va arrayning '1'chi indeksi bu 3.
+// Bizning function uchinchi berilgan '2' raqamini shu '3' bilan almashtirib,
+// yangilangan arrayni qaytarmoqda.
+
+
+function changeNumberInArray(
+  fNumber: number, arr: number[], changeNum: number
+): number[] {
+  const changedArr = [...arr];
+  changedArr[fNumber] = changeNum;
+  return changedArr;
+}
+
+console.log("return:", changeNumberInArray(1, [1,3,7,2], 2))
+
+// =======================================================================
+
 // TASK ZC
 
 // Selisy (°C) shkalasi bo'yicha raqam qabul qilib, uni
@@ -13,18 +40,14 @@ console.log("TASK AREA!")
 
 // °C va °F => Tempraturani o'lchashda ishlatiladigan o'lchov birligi.
 
+// function celsiusToFahrenheit(celsius: number): number {
+//   const factor = 9 / 5;
+//   const offset = 32;
+//   return celsius * factor + offset;
+// }
 
-function celsiusToFahrenheit(celsius: number): number {
-  const factor = 9 / 5;
-  const offset = 32;
-  return celsius * factor + offset;
-}
-
-console.log("returnFirst:", celsiusToFahrenheit(0));
-console.log("returnSec:", celsiusToFahrenheit(10));
-
-
-
+// console.log("returnFirst:", celsiusToFahrenheit(0));
+// console.log("returnSec:", celsiusToFahrenheit(10));
 
 // ==========================================================================
 
