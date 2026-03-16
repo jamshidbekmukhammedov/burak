@@ -1,5 +1,17 @@
 console.log("TASK AREA!")
 
+// TASK ZE:
+
+// Shunday function yozing, uni  string parametri bolsin. String ichida takrorlangan harflarni olib tashlab qolganini qaytarsin
+// MASALAN: removeDuplicate('stringg') return 'string'
+
+const removeDuplicate = (input: string): string =>
+  input.split('').filter((char, index) => input.indexOf(char) === index).join('');
+
+console.log("return:", removeDuplicate('stringg'));
+
+// =======================================================================
+
 // TASK ZD
 
 // Shunday function yozing. Bu function o'ziga, parametr sifatida
@@ -15,15 +27,15 @@ console.log("TASK AREA!")
 // yangilangan arrayni qaytarmoqda.
 
 
-function changeNumberInArray(
-  fNumber: number, arr: number[], changeNum: number
-): number[] {
-  const changedArr = [...arr];
-  changedArr[fNumber] = changeNum;
-  return changedArr;
-}
+// function changeNumberInArray(
+//   fNumber: number, arr: number[], changeNum: number
+// ): number[] {
+//   const changedArr = [...arr];
+//   changedArr[fNumber] = changeNum;
+//   return changedArr;
+// }
 
-console.log("return:", changeNumberInArray(1, [1,3,7,2], 2))
+// console.log("return:", changeNumberInArray(1, [1,3,7,2], 2))
 
 // =======================================================================
 
