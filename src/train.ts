@@ -1,14 +1,36 @@
 console.log("TASK AREA!")
 
+// TASK-ZF:
+
+// Shunday function yozing, uni string parametri bolsin. 
+// String ichidagi har bir sozni bosh harflarini katta harf qilib qaytarsin 
+// lekin 1 yoki 2 harfdan iborat sozlarni esa oz holicha qoldirsin.
+// MASALAN: capitalizeWords('name should be a string') 
+// return 'Name Should be a String'
+
+function capitalizeWords(input: string): string {
+    return input.split(' ').reduce((result, current) => {
+        const fixed = current.length <= 2 
+            ? current 
+            : current.charAt(0).toUpperCase() + current.slice(1);
+        return result ? `${result} ${fixed}` : fixed;
+    }, '');
+}
+
+console.log("return:", capitalizeWords('hello my name is marco!'));
+
+
+// =========================================================================
+
 // TASK ZE:
 
 // Shunday function yozing, uni  string parametri bolsin. String ichida takrorlangan harflarni olib tashlab qolganini qaytarsin
 // MASALAN: removeDuplicate('stringg') return 'string'
 
-const removeDuplicate = (input: string): string =>
-  input.split('').filter((char, index) => input.indexOf(char) === index).join('');
+// const removeDuplicate = (input: string): string =>
+//   input.split('').filter((char, index) => input.indexOf(char) === index).join('');
 
-console.log("return:", removeDuplicate('stringg'));
+// console.log("return:", removeDuplicate('stringg'));
 
 // =======================================================================
 
