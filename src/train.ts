@@ -1,5 +1,23 @@
 console.log("TASK AREA!")
 
+
+// TASK-ZG:
+
+// Shunday function yozing, u berilgan string 
+// parametrni snake casega otkazib qaytarsin. 
+// MASALAN: capitalizeWords('name should be a string') 
+// return 'name_should_be_a_string'
+
+function capitalizeWords(input: string): string {
+  return input.trim().split(/\s+/)
+    .reduce((acc, word, i) => i === 0 ? word.toLowerCase() : acc + '_' + word.toLowerCase(), '');
+}
+
+console.log("return:", capitalizeWords('name should be a string'));
+
+
+// ========================================================
+
 // TASK-ZF:
 
 // Shunday function yozing, uni string parametri bolsin. 
@@ -8,16 +26,16 @@ console.log("TASK AREA!")
 // MASALAN: capitalizeWords('name should be a string') 
 // return 'Name Should be a String'
 
-function capitalizeWords(input: string): string {
-    return input.split(' ').reduce((result, current) => {
-        const fixed = current.length <= 2 
-            ? current 
-            : current.charAt(0).toUpperCase() + current.slice(1);
-        return result ? `${result} ${fixed}` : fixed;
-    }, '');
-}
+// function capitalizeWords(input: string): string {
+//     return input.split(' ').reduce((result, current) => {
+//         const fixed = current.length <= 2 
+//             ? current 
+//             : current.charAt(0).toUpperCase() + current.slice(1);
+//         return result ? `${result} ${fixed}` : fixed;
+//     }, '');
+// }
 
-console.log("return:", capitalizeWords('hello my name is marco!'));
+// console.log("return:", capitalizeWords('hello my name is marco!'));
 
 
 // =========================================================================
