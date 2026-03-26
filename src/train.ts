@@ -1,6 +1,32 @@
 console.log("TASK AREA!")
 
 
+
+// TASK-ZH:
+
+// Shunday function yozing, u berilgan array parametrni 
+// ichidagi eng katta raqamgacha tushib qolgan raqamlarni bir arrayda qaytarsin. 
+// MASALAN: findDisappearedNumbers([1, 3, 4, 7]) return [2, 5, 6]
+
+
+function findDisappearedNumbers(array: number[]): number[] {
+    const set = new Set(array),
+      max = Math.max(...array),
+      result: number[] = [];
+
+    for (let i = 1; i < max; i++) {
+        if (!set.has(i)) {
+          result.push(i);
+        }
+    }
+    return result;
+}
+
+console.log("return:", findDisappearedNumbers([1, 3, 4, 7]));
+
+
+//  =========================================================================
+
 // TASK-ZG:
 
 // Shunday function yozing, u berilgan string 
@@ -8,12 +34,12 @@ console.log("TASK AREA!")
 // MASALAN: capitalizeWords('name should be a string') 
 // return 'name_should_be_a_string'
 
-function capitalizeWords(input: string): string {
-  return input.trim().split(/\s+/)
-    .reduce((acc, word, i) => i === 0 ? word.toLowerCase() : acc + '_' + word.toLowerCase(), '');
-}
+// function capitalizeWords(input: string): string {
+//   return input.trim().split(/\s+/)
+//     .reduce((acc, word, i) => i === 0 ? word.toLowerCase() : acc + '_' + word.toLowerCase(), '');
+// }
 
-console.log("return:", capitalizeWords('name should be a string'));
+// console.log("return:", capitalizeWords('name should be a string'));
 
 
 // ========================================================
