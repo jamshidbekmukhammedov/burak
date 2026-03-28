@@ -1,6 +1,23 @@
 console.log("TASK AREA!")
 
 
+// TASK ZI
+
+// Shundan function yozing, bu function 3 soniydan so'ng
+// "Hello World!" so'zini qaytarsin.
+
+// MASALAN: delayHelloWorld("Hello World"); return "Hello World";
+
+
+function delayHelloWorld(input: string, callback: (result: string) => void): void {
+    setTimeout(() => callback(input), 3000);
+}
+
+// Ishlatish:
+delayHelloWorld("Hello World!", (result) => {
+    console.log(result); 
+});
+// =========================================================================
 
 // TASK-ZH:
 
@@ -9,20 +26,20 @@ console.log("TASK AREA!")
 // MASALAN: findDisappearedNumbers([1, 3, 4, 7]) return [2, 5, 6]
 
 
-function findDisappearedNumbers(array: number[]): number[] {
-    const set = new Set(array),
-      max = Math.max(...array),
-      result: number[] = [];
+// function findDisappearedNumbers(array: number[]): number[] {
+//     const set = new Set(array),
+//       max = Math.max(...array),
+//       result: number[] = [];
 
-    for (let i = 1; i < max; i++) {
-        if (!set.has(i)) {
-          result.push(i);
-        }
-    }
-    return result;
-}
+//     for (let i = 1; i < max; i++) {
+//         if (!set.has(i)) {
+//           result.push(i);
+//         }
+//     }
+//     return result;
+// }
 
-console.log("return:", findDisappearedNumbers([1, 3, 4, 7]));
+// console.log("return:", findDisappearedNumbers([1, 3, 4, 7]));
 
 
 //  =========================================================================
